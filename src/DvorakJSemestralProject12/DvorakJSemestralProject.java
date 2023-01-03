@@ -1,6 +1,5 @@
 package DvorakJSemestralProject12;
 
-
 /**
  * 12. Program počítá korelační koeficient posloupnosti náhodných čísel
  *
@@ -14,7 +13,8 @@ public class DvorakJSemestralProject {
     }
 
     /**
-     * Metoda pocita korelacni koeficient pomoci parametru a dilcich metod 
+     * Metoda pocita korelacni koeficient podle Pearsonova vzorce, pomoci
+     * parametru a dilcich metod, kterym postupne predava hodnoty
      *
      * @param min, minimalni hodnota nahodneho cisla
      * @param max, maximalni hodnota nahodneho cisla
@@ -61,8 +61,8 @@ public class DvorakJSemestralProject {
         double[] a = new double[n];
 
         for (int i = 0; i < n; i++) {
-            a[i] = (Math.random() * (max - min + 0.001) + min);
-            System.out.println(a[i]);
+            a[i] = (Math.random() * (0.01 + max - min) + min);
+            //System.out.println(a[i]);
         }
         return a;
     }
@@ -82,7 +82,7 @@ public class DvorakJSemestralProject {
             a[i][0] = b[i];
             a[i][1] = b[i + k];
         }
-        MatrixTools.display(a);
+        //MatrixTools.display(a);
         return a;
     }
 
